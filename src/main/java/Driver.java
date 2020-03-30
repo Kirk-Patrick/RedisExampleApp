@@ -12,9 +12,9 @@ public class Driver {
         { System.out.println("Redis is running");
           jedis.set("data","purge");
 
-            jedis.sadd("Request1", "123456789");
-            jedis.sadd("Request1", "123456785");
-            jedis.sadd("Request1", "444444444");
+            jedis.sadd("setKey", "123456789");
+            jedis.sadd("setKey", "123456785");
+            jedis.sadd("setKey", "444444444");
 
             Set<String> dataSet = jedis.smembers("Request1");
             dataSet.forEach(System.out::println);
